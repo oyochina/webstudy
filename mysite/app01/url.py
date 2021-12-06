@@ -11,5 +11,6 @@ urlpatterns = [
     #path('index/',views.app01),
     #re_path('index/(?P<m>\d+)',views.index),
     re_path('index/',views.index),
+    re_path('new/',views.new,name='thenew'),
     #re_path('^app01/',include('app01.url'))
 ]
