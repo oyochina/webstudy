@@ -1,5 +1,6 @@
 from django.shortcuts import render,HttpResponse,redirect
-
+from django.urls import resolvers
+from django.urls.base import reverse
 # Create your views here.
 
 #def index(request):
@@ -13,5 +14,6 @@ def index(request):
     #print(name)
     return render(request,'app01/templates/index.html')
 
-def new(request):
-    return HttpResponse('thr new html')
+def new(request,id):
+    
+    return HttpResponse('指向：'+reverse('app_01:thenew',args=(id,)))
