@@ -8,11 +8,12 @@ from django.urls.base import reverse
 
 def index(request):
     name=request.POST.get('name1')
+    test='hello!'
     #if name=='aaa':
     #    print(name)
     #    return redirect('/app01/new/')
     #print(name)
-    return render(request,'app01/templates/index.html')
+    return render(request,'app01/templates/index.html',locals())
 
 def new(request,id):
     
