@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-he2vlg_z7$g390@^x(4r*5%1h!0etl7!!)4@x@$l^-%82v#1)d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'chat',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -69,7 +71,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mysocket.wsgi.application'
 
-
+ASGI_APPLICATION = 'mysocket.asgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
